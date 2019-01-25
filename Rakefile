@@ -29,7 +29,3 @@ Resque.after_fork do |job|
   Coverband.start
 end
 
-at_exit do
-  Coverband::Collectors::Coverage.instance.report_coverage(true)
-end
-
